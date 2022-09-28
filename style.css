@@ -20,12 +20,20 @@ body {
 
 html {
   /* This makes 1rem = 10px */
-  /* font-size: 62.5%; */
+  font-size: 62.5%;
 }
 
-.navbar-brand,
-.nav-link {
+.navbar-brand {
+  font-size: 2rem;
   color: white;
+}
+
+.form-control {
+  font-size: 1.6rem;
+}
+
+.btn {
+  font-size: 1.6rem;
 }
 
 .navbar-brand:hover,
@@ -33,32 +41,53 @@ html {
   color: rgb(177, 177, 177);
 }
 
-/*  */
-/* CONTACT ME SECTION */
+/* Shrink Create/Login Buttons */
+.nav-btn {
+  font-size: 1.2rem;
+  gap: 3rem;
+  column-gap: 3rem;
+  row-gap: 3rem;
+}
+
+.navbar-collapse {
+  flex-grow: 0;
+}
+
+.search-box {
+  display: flex;
+}
+
+.navbar-nav {
+  column-gap: 1rem;
+  row-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-btn {
+  margin-right: 1rem;
+}
+
+/* CONTACT SECTION */
 .contact-section {
   margin-top: 5rem;
   padding: 3rem;
   border-radius: 20px;
   max-width: 70rem;
   margin-bottom: 12rem;
-  /* background-color: rgba(37, 40, 57, 1); */
   border: 3px solid white;
-  /* border: 3px solid #2aa0ec; */
 }
 
-.contact-header {
-  font-size: 3rem;
-  text-align: center;
-  justify-content: center;
-  margin-bottom: 2rem;
-  /* color: #2aa0ec; */
-  color: white;
+.modal-title {
+  font-size: 2rem;
+}
+
+.btn-close {
+  font-size: 2rem;
 }
 
 .form-btn {
-  /* background-color: #2aa0ec; */
   width: 100%;
-  /* margin-left: 25%; */
   margin-top: 1rem;
   border-radius: 10px;
   font-size: 1.4rem;
@@ -66,4 +95,16 @@ html {
   background-color: #0d6efd;
   border: 1px solid #0d6efd;
   padding: 0.6rem 0.6rem 0.6rem 0.6rem;
+}
+
+/* Collapse */
+@media (max-width: 991.98px) {
+  /* Resize for collapse */
+  .search-box {
+    width: 22rem;
+  }
+
+  .login-btn {
+    margin-bottom: 1rem;
+  }
 }
