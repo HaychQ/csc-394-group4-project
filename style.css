@@ -1,0 +1,69 @@
+/* COLOR SCHEMES 
+STEAM COLORS
+Nav-items: color: #66c0f4
+Background-color: #1b2838;
+Font-family: Motiva Sans
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: "Fira Sans", sans-serif; */
+  /* font-family: "Passion One", cursive; */
+  /* Steam Background */
+  background-color: #1b2838;
+}
+
+html {
+  /* This makes 1rem = 10px */
+  /* font-size: 62.5%; */
+}
+
+.navbar-brand,
+.nav-link {
+  color: white;
+}
+
+.navbar-brand:hover,
+.nav-link:hover {
+  color: rgb(177, 177, 177);
+}
+
+/*  */
+/* CONTACT ME SECTION */
+.contact-section {
+  margin-top: 5rem;
+  padding: 3rem;
+  border-radius: 20px;
+  max-width: 70rem;
+  margin-bottom: 12rem;
+  /* background-color: rgba(37, 40, 57, 1); */
+  border: 3px solid white;
+  /* border: 3px solid #2aa0ec; */
+}
+
+.contact-header {
+  font-size: 3rem;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  /* color: #2aa0ec; */
+  color: white;
+}
+
+.form-btn {
+  /* background-color: #2aa0ec; */
+  width: 100%;
+  /* margin-left: 25%; */
+  margin-top: 1rem;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background-color: #0d6efd;
+  border: 1px solid #0d6efd;
+  padding: 0.6rem 0.6rem 0.6rem 0.6rem;
+}
