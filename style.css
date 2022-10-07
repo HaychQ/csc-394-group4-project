@@ -99,7 +99,30 @@ html {
 }
 /**********************************************************/
 /* INTRO SECTION */
+.intro-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  border: 2px solid #0d6efd;
+}
 
+/* User Input Button - Will give us Link to fetch */
+.btn-user-input {
+  font-size: 2rem;
+  padding: 0.2rem;
+  border-radius: 5px;
+  vertical-align: middle;
+  color: white;
+  background-color: #0d6efd;
+}
+
+.user-textbox {
+  font-size: 2rem;
+  vertical-align: middle;
+}
 /**********************************************************/
 /* GAME SECTION */
 /* Vertically/Horizontally centers games in container */
