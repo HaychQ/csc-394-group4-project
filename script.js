@@ -6,20 +6,20 @@ const userInfo = {
   apiKey: "",
 };
 
-// const userInput = document.getElementById("userInput").textContent;
-// const userInput = document.getElementById("userInput").innerText;
+// User Input Textbox
 const userInput = document.getElementById("userInput");
+
+// User Submit Button
 const btnUserInput = document.getElementById("btn_UserInput");
 
-// Form - Contains API Key(string) given from User
+// Form - Contains API Key(string) given by User
 const userInputForm = document.getElementById("userInputForm");
 
 btnUserInput.addEventListener("click", function (event) {
   // PREVENTS FORM SUBMISSION
   event.preventDefault();
 
-  /* User's text entered - inputText = formId.inputId.value
-   */
+  // User's text entered - inputText = formId.inputId.value
   const inputText = userInputForm.userInput.value;
 
   // Storing user's API Key into userInfo object
