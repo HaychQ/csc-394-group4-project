@@ -16,6 +16,7 @@ body {
   /* font-family: "Passion One", cursive; */
   /* Steam Background */
   background-color: #1b2838;
+  color: white;
 }
 
 html {
@@ -96,7 +97,50 @@ html {
   border: 1px solid #0d6efd;
   padding: 0.6rem 0.6rem 0.6rem 0.6rem;
 }
+/**********************************************************/
+/* INTRO SECTION */
 
+/**********************************************************/
+/* GAME SECTION */
+/* Vertically/Horizontally centers games in container */
+.center-games {
+  border: 2px solid #0d6efd;
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container for games list */
+.game-container {
+  /* margin: 0 auto; */
+  /* max-width: 120rem; */
+  /* max-height: 200rem; */
+  font-size: 3rem;
+  border: 2px solid #0d6efd;
+}
+
+/* Contains all games(1-10+ games) */
+.game-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  font-size: 5rem;
+  list-style: none;
+  padding: 1rem;
+  column-gap: 3rem;
+  row-gap: 3rem;
+  /* border: 2px solid #0d6efd; */
+}
+
+/* Individual Game */
+.game {
+  text-align: center;
+  border: 2px solid #0d6efd;
+}
+
+/**********************************************************/
+/* MEDIA QUERIES */
 /* Collapse */
 @media (max-width: 991.98px) {
   /* Resize for collapse */
