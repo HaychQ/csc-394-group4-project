@@ -7,8 +7,9 @@ const userInfo = {
 };
 
 // HTML ID SELECTORS
+
 // User Input Textbox
-const userInput = document.getElementById("userInput");
+const userInputText = document.getElementById("userInputText");
 
 // User Submit Button
 const btnUserInput = document.getElementById("btn_UserInput");
@@ -24,7 +25,7 @@ btnUserInput.addEventListener("click", function (event) {
   event.preventDefault();
 
   // User's text entered - inputText = formId.inputId.value
-  const inputText = userInputForm.userInput.value;
+  const inputText = userInputForm.userInputText.value;
 
   // Storing user's API Key into userInfo object
   userInfo.apiKey = inputText;
@@ -45,13 +46,15 @@ function displayGames() {
     document.getElementById(`game-${i}`).innerHTML = `Display${i}`;
   }
 }
-// document.getElementById("game-1").innerHTML = "Test1";
-// document.getElementById("game-2").innerHTML = "Test2";
-// document.getElementById("game-3").innerHTML = "Test3";
-// document.getElementById("game-4").innerHTML = "Test4";
-// document.getElementById("game-5").innerHTML = "Test5";
-// document.getElementById("game-6").innerHTML = "Test6";
-// document.getElementById("game-7").innerHTML = "Test7";
-// document.getElementById("game-8").innerHTML = "Test8";
-// document.getElementById("game-9").innerHTML = "Test9";
-// document.getElementById("game-10").innerHTML = "Test10";
+/*
+document.getElementById("game-1").innerHTML = "Display1";
+document.getElementById("game-2").innerHTML = "Display2";
+document.getElementById("game-3").innerHTML = "Display3";
+document.getElementById("game-4").innerHTML = "Display4";
+document.getElementById("game-5").innerHTML = "Display5";
+document.getElementById("game-6").innerHTML = "Display6";
+document.getElementById("game-7").innerHTML = "Display7";
+document.getElementById("game-8").innerHTML = "Display8";
+document.getElementById("game-9").innerHTML = "Display9";
+document.getElementById("game-10").innerHTML = "Display10";
+*/
