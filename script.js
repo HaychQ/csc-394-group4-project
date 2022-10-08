@@ -1,5 +1,23 @@
 //querySelector returns FIRST match
 //getElementById returns element with matching id(only ONE ID allowed in html)
+/*TODO
+API SECTION - Priority*
+-Add Steam User ID Textbox - REQUIRED*
+-API KEY - add REQUIRED*
+-Display alert if user leaves input empty
+
+CREATE LOGIN SECTION
+-Add Eventlistener onclick, store Username & Password into userInfo Object
+-Update Design: 
+  -Create Account Header
+  -Shrink submit button width
+
+-GAME DISPLAY SECTION - Priority*
+-Add Width/Height to match Steam Game Cards
+-Add placeholder image(this will be swapped out using innerHTML). Default image can be left alone IF user doesn't have all 10 games
+
+FUTURE EXTRAS: Add tilt to cards/card grow(x1.1-1.2), Fade-In on site launch for API SECTION
+*/
 
 // User Information Object - IDEA: PUSH TO DATABASE?
 const userInfo = {
