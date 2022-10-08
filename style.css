@@ -147,7 +147,7 @@ html {
   /* max-width: 120rem; */
   /* max-height: 200rem; */
   font-size: 3rem;
-  border: 2px solid #0d6efd;
+  /* border: 2px solid #0d6efd; */
 }
 
 /* Contains all games(1-10+ games) */
@@ -163,14 +163,11 @@ html {
 }
 
 /* Individual Game */
-.game {
+.game img {
   text-align: center;
-  border: 2px solid #0d6efd;
-  min-width: 20rem;
-  min-height: 30rem;
-  /* display: block; */
-  /* width: 10vw;
-  height: 24vh; */
+  max-width: 15rem;
+  max-height: 25rem;
+  /* border: 2px solid #0d6efd; */
 }
 
 /**********************************************************/

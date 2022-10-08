@@ -13,7 +13,6 @@ CREATE LOGIN SECTION
   -Shrink submit button width
 
 -GAME DISPLAY SECTION - Priority*
--Add Width/Height to match Steam Game Cards
 -Add placeholder image(this will be swapped out using innerHTML). Default image can be left alone IF user doesn't have all 10 games
 
 FUTURE EXTRAS: Add tilt to cards/card grow(x1.1-1.2), Fade-In on site launch for API SECTION
@@ -23,6 +22,8 @@ FUTURE EXTRAS: Add tilt to cards/card grow(x1.1-1.2), Fade-In on site launch for
 const userInfo = {
   apiKey: "",
 };
+
+const imageList = ["https://i.postimg.cc/GmBrBqkV/steam-card-17.jpg", "https://i.postimg.cc/SsbybCY5/steam-card-5.jpg"];
 
 // HTML ID SELECTORS
 
@@ -61,7 +62,10 @@ btnUserInput.addEventListener("click", function (event) {
 */
 function displayGames() {
   for (let i = 1; i < 11; i++) {
-    document.getElementById(`game-${i}`).innerHTML = `Display${i}`;
+    // document.getElementById(`game-${i}`).innerHTML = `Display${i}`;
+    if (i < 6) {
+      document.getElementById(`game-${i}`).innerHTML = `<img src=${imageList[0]}/>`;
+    } else document.getElementById(`game-${i}`).innerHTML = `<img src=${imageList[1]}/>`;
   }
 }
 /*
