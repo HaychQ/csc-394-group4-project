@@ -89,6 +89,13 @@ html {
   min-height: 30rem;
 }
 
+.modal-content__login {
+  border-radius: 0;
+  max-width: 40rem;
+  min-height: 24rem;
+  padding-bottom: none;
+}
+
 .modal-header {
   background-color: #333;
   border-radius: 0;
