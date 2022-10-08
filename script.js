@@ -40,17 +40,29 @@ btnUserInput.addEventListener("click", function (event) {
   // PREVENTS FORM SUBMISSION
   event.preventDefault();
 
-  // Storing User Steam ID & User API Key into userInfo object
-  userInfo.steamId = userInputForm.userSteamId.value;
-  userInfo.apiKey = userInputForm.userApiKey.value;
+  if (isUserInputValid()) {
+    // Storing User Steam ID & User API Key into userInfo object
+    userInfo.steamId = userInputForm.userSteamId.value;
+    userInfo.apiKey = userInputForm.userApiKey.value;
 
-  console.log("User Steam ID: ", userInfo.steamId);
-  console.log("User API KEY: ", userInfo.apiKey);
-  console.log("userInfo: ", userInfo);
+    console.log("User Steam ID: ", userInfo.steamId);
+    console.log("User API KEY: ", userInfo.apiKey);
+    console.log("userInfo: ", userInfo);
 
-  //Call function to display games
-  displayGames();
+    //Call function to display games
+    displayGames();
+  } else {
+    alert("Please enter Steam ID and Steam API Key");
+  }
 });
+
+function isUserInputValid() {
+  const id = userInputForm.userSteamId.value;
+  const key = userInputForm.userApiKey.value;
+
+  if (id.length !== 0 && key.length !== 0) return true;
+  else return false;
+}
 
 /* 
   Updates Game slot - Example/Placeholder - Game image will be displayed here
