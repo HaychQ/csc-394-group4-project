@@ -1,16 +1,9 @@
 //querySelector returns FIRST match
 //getElementById returns element with matching id(only ONE ID allowed in html)
 /*TODO
-API SECTION - Priority*
--Add Steam User ID Textbox - REQUIRED*
--API KEY - add REQUIRED*
--Display alert if user leaves input empty
-
 CREATE LOGIN SECTION
 -Add Eventlistener onclick, store Username & Password into userInfo Object
--Update Design: 
-  -Create Account Header
-  -Shrink submit button width
+
 */
 
 // User Information Object - IDEA: PUSH TO DATABASE?
