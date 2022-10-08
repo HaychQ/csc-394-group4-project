@@ -116,14 +116,24 @@ html {
 }
 
 /* User Input Button - Will give us Link to fetch */
-/* .btn-user-input {
+.btn-submit {
   font-size: 2rem;
   padding: 0.2rem;
-  border-radius: 5px;
   vertical-align: middle;
+  color: #0d6efd;
+  border: 3px solid #0d6efd;
+  background-color: rgb(0, 0, 0, 0);
+  /* border-radius: 5px; */
+}
+
+.btn-submit:hover,
+.btn-submit:active {
   color: white;
   background-color: #0d6efd;
-} */
+  border: 3px solid #0d6efd;
+
+  transition: all 500ms ease;
+}
 
 .user-textbox {
   font-size: 2rem;
@@ -139,12 +149,13 @@ html {
 .user-textbox:hover,
 .user-textbox:focus {
   border-bottom: 3px solid white;
+  transition: 300ms ease;
 }
 .user-input-form {
   display: flex;
   flex-direction: column;
   /* column-gap: 2rem; */
-  row-gap: 1rem;
+  row-gap: 2rem;
 }
 /**********************************************************/
 /* GAME SECTION */
