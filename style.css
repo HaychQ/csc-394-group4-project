@@ -128,6 +128,22 @@ html {
 .user-textbox {
   font-size: 2rem;
   vertical-align: middle;
+  min-width: 30vw;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px solid;
+  border-bottom: 3px solid #0d6efd;
+  color: white;
+}
+
+.user-textbox:hover,
+.user-textbox:focus {
+  border-bottom: 3px solid white;
+}
+.user-input-form {
+  display: flex;
+  flex-direction: column;
+  /* column-gap: 2rem; */
+  row-gap: 1rem;
 }
 /**********************************************************/
 /* GAME SECTION */
@@ -173,7 +189,6 @@ html {
 }
 
 .game img:hover {
-  transform: rotate();
   transform: scale(1.1);
   transition: all 300ms ease-in;
   cursor: pointer;

@@ -11,15 +11,11 @@ CREATE LOGIN SECTION
 -Update Design: 
   -Create Account Header
   -Shrink submit button width
-
--GAME DISPLAY SECTION - Priority*
--Add placeholder image(this will be swapped out using innerHTML). Default image can be left alone IF user doesn't have all 10 games
-
-FUTURE EXTRAS: Add tilt to cards/card grow(x1.1-1.2), Fade-In on site launch for API SECTION
 */
 
 // User Information Object - IDEA: PUSH TO DATABASE?
 const userInfo = {
+  steamId: "",
   apiKey: "",
 };
 
@@ -27,8 +23,9 @@ const imageList = ["https://i.postimg.cc/GmBrBqkV/steam-card-17.jpg", "https://i
 
 // HTML ID SELECTORS
 
-// User Input Textbox
-const userInputText = document.getElementById("userInputText");
+// User Input Textboxes
+const user_SteamId = document.getElementById("userSteamId");
+const user_ApiKey = document.getElementById("userApiKey");
 
 // User Submit Button
 const btnUserInput = document.getElementById("btn_UserInput");
@@ -43,13 +40,12 @@ btnUserInput.addEventListener("click", function (event) {
   // PREVENTS FORM SUBMISSION
   event.preventDefault();
 
-  // User's text entered - inputText = formId.inputId.value
-  const inputText = userInputForm.userInputText.value;
+  // Storing User Steam ID & User API Key into userInfo object
+  userInfo.steamId = userInputForm.userSteamId.value;
+  userInfo.apiKey = userInputForm.userApiKey.value;
 
-  // Storing user's API Key into userInfo object
-  userInfo.apiKey = inputText;
-
-  console.log("User Input: ", inputText);
+  console.log("User Steam ID: ", userInfo.steamId);
+  console.log("User API KEY: ", userInfo.apiKey);
   console.log("userInfo: ", userInfo);
 
   //Call function to display games
