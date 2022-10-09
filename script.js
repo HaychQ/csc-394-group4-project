@@ -54,19 +54,36 @@ btn_CreateAccount.addEventListener("click", function (event) {
   // PREVENTS FORM SUBMISSION
   event.preventDefault();
 
-  console.log("create_AccountForm: ", event.target.value);
+  // If TRUE, then store all data into userInfo Object
+  if (isCreateAccountValid()) {
+    userInfo.username = create_AccountForm.createUsername.value;
+    userInfo.password = create_AccountForm.createPassword.value;
+    userInfo.steamId = create_AccountForm.createSteamId.value;
+    userInfo.apiKey = create_AccountForm.createApiKey.value;
 
-  userInfo.username = create_AccountForm.createUsername.value;
-  userInfo.password = create_AccountForm.createPassword.value;
-  userInfo.steamId = create_AccountForm.createSteamId.value;
-  userInfo.apiKey = create_AccountForm.createApiKey.value;
+    console.log("Create - Username: ", userInfo.username);
+    console.log("Create - Password: ", userInfo.password);
+    console.log("Create - SteamId: ", userInfo.steamId);
+    console.log("Create - ApiKey: ", userInfo.apiKey);
+    console.log("Create - userInfo: ", userInfo);
 
-  console.log("Create - Username: ", userInfo.username);
-  console.log("Create - Password: ", userInfo.password);
-  console.log("Create - SteamId: ", userInfo.steamId);
-  console.log("Create - ApiKey: ", userInfo.apiKey);
-  console.log("Create - userInfo: ", userInfo);
+    //Call function to display games
+    // displayGames();
+  } else {
+    alert("Please fill out all input fields");
+  }
 });
+
+// Checks that User provided Username, Password, SteamId, & Api Key
+function isCreateAccountValid() {
+  const username = create_AccountForm.createUsername.value;
+  const password = create_AccountForm.createPassword.value;
+  const id = create_AccountForm.createSteamId.value;
+  const key = create_AccountForm.createApiKey.value;
+
+  if (username.length !== 0 && password.length !== 0 && id.length !== 0 && key.length !== 0) return true;
+  else return false;
+}
 
 btn_UserInput.addEventListener("click", function (event) {
   // PREVENTS FORM SUBMISSION
