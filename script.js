@@ -3,13 +3,22 @@
 /*TODO
 CREATE LOGIN SECTION
 -Add Eventlistener onclick, store Username & Password into userInfo Object
+*/
 
+/* 
+name="" inside HTML Forms - For Database
+User Steam Id => steamid
+UserAPI Key   => apikey
+Username      => username
+Password      => password
 */
 
 // User Information Object - IDEA: PUSH TO DATABASE?
 const userInfo = {
   steamId: "",
   apiKey: "",
+  username: "",
+  password: "",
 };
 
 const imageList = ["https://i.postimg.cc/GmBrBqkV/steam-card-17.jpg", "https://i.postimg.cc/SsbybCY5/steam-card-5.jpg"];
@@ -21,22 +30,22 @@ const user_SteamId = document.getElementById("userSteamId");
 const user_ApiKey = document.getElementById("userApiKey");
 
 // User Submit Button
-const btnUserInput = document.getElementById("btn_UserInput");
+const btn_UserInput = document.getElementById("btn_UserInput");
 
 // Form - Contains API Key(string) given by User
-const userInputForm = document.getElementById("userInputForm");
+const user_InputForm = document.getElementById("userInputForm");
 
 // Individual Game Selectors
-const game1 = document.getElementById("game-1");
+// const game1 = document.getElementById("game-1");
 
-btnUserInput.addEventListener("click", function (event) {
+btn_UserInput.addEventListener("click", function (event) {
   // PREVENTS FORM SUBMISSION
   event.preventDefault();
 
   if (isUserInputValid()) {
     // Storing User Steam ID & User API Key into userInfo object
-    userInfo.steamId = userInputForm.userSteamId.value;
-    userInfo.apiKey = userInputForm.userApiKey.value;
+    userInfo.steamId = user_InputForm.userSteamId.value;
+    userInfo.apiKey = user_InputForm.userApiKey.value;
 
     console.log("User Steam ID: ", userInfo.steamId);
     console.log("User API KEY: ", userInfo.apiKey);
@@ -49,9 +58,10 @@ btnUserInput.addEventListener("click", function (event) {
   }
 });
 
+// Checks that User has provided SteamId & Api Key
 function isUserInputValid() {
-  const id = userInputForm.userSteamId.value;
-  const key = userInputForm.userApiKey.value;
+  const id = user_InputForm.userSteamId.value;
+  const key = user_InputForm.userApiKey.value;
 
   if (id.length !== 0 && key.length !== 0) return true;
   else return false;

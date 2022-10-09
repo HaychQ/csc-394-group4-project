@@ -151,7 +151,9 @@ html {
   margin-top: 5rem;
   margin-bottom: 5rem;
   height: 30rem;
-  border: 2px solid #0d6efd;
+
+  /* CONTAINER OUTLINE */
+  /* border: 2px solid #0d6efd; */
 }
 
 .intro-heading {
@@ -188,7 +190,7 @@ html {
   background-color: #3081fa;
 
   width: 50%;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   padding: 0.6rem 0.6rem 0.6rem 0.6rem;
 }
@@ -239,12 +241,14 @@ html {
 /* GAME SECTION */
 /* Vertically/Horizontally centers games in container */
 .center-games {
-  border: 2px solid #0d6efd;
   width: 100vw;
   height: 55vh;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* CONTAINER OUTLINE */
+  /* border: 2px solid #0d6efd; */
 }
 
 /* Container for games list */

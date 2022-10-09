@@ -63,13 +63,12 @@
         <div class="modal-content">
           <div class="modal-header">
             <span class="modal-title" id="exampleModalLabel">CREATE ACCOUNT</span>
-            <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
           </div>
           <div class="modal-body">
             <div class="contact-form">
               <!-- Uncomment once POST is fixed -->
               <!-- <form action="" method="POST"> -->
-              <form action="" method="">
+              <form>
                 <div class="row">
                   <!-- USERNAME -->
                   <div class="col col-md-12">
@@ -84,7 +83,7 @@
                   <!-- API KEY -->
                   <div class="col col-md-12">
                     <label for="exampleFormControlInput1" id="fullname">API Key:</label>
-                    <input type="text" name="password" class="form-control modal-textbox" placeholder="API Key" required />
+                    <input type="text" name="apikey" class="form-control modal-textbox" placeholder="API Key" required />
                   </div>
                 </div>
                 <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">Cancel</button> -->
@@ -111,7 +110,6 @@
         <div class="modal-content modal-content__login">
           <div class="modal-header">
             <span class="modal-title" id="exampleModalLabel">Login</span>
-            <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
           </div>
           <div class="modal-body">
             <div class="contact-form">
@@ -157,6 +155,7 @@
       <div class="game-container">
         <!-- Game list -->
         <ul class="game-list">
+          <!-- Will inject game image into list item -->
           <li class="game" id="game-1"></li>
           <li class="game" id="game-2"></li>
           <li class="game" id="game-3"></li>
