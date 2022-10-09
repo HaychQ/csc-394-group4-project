@@ -21,6 +21,7 @@ const userInfo = {
   password: "",
 };
 
+// For example purposes. Will need to replace these with OUR FETCHED GAME IMAGES
 const imageList = ["https://i.postimg.cc/GmBrBqkV/steam-card-17.jpg", "https://i.postimg.cc/SsbybCY5/steam-card-5.jpg"];
 
 // HTML ID SELECTORS
@@ -29,14 +30,43 @@ const imageList = ["https://i.postimg.cc/GmBrBqkV/steam-card-17.jpg", "https://i
 const user_SteamId = document.getElementById("userSteamId");
 const user_ApiKey = document.getElementById("userApiKey");
 
-// User Submit Button
+// Create Account Textboxes
+const create_SteamId = document.getElementById("createSteamId");
+const create_ApiKey = document.getElementById("createApiKey");
+const create_Username = document.getElementById("createUsername");
+const create_Password = document.getElementById("createPassword");
+
+// User Submit Button - used for EventListener
 const btn_UserInput = document.getElementById("btn_UserInput");
 
 // Form - Contains API Key(string) given by User
 const user_InputForm = document.getElementById("userInputForm");
 
+// Create Account Form - Contains Username/Password given by User
+const create_AccountForm = document.getElementById("createAccountForm");
+
+const btn_CreateAccount = document.getElementById("btn_CreateAccount");
+
 // Individual Game Selectors
 // const game1 = document.getElementById("game-1");
+
+btn_CreateAccount.addEventListener("click", function (event) {
+  // PREVENTS FORM SUBMISSION
+  event.preventDefault();
+
+  console.log("create_AccountForm: ", event.target.value);
+
+  userInfo.username = create_AccountForm.createUsername.value;
+  userInfo.password = create_AccountForm.createPassword.value;
+  userInfo.steamId = create_AccountForm.createSteamId.value;
+  userInfo.apiKey = create_AccountForm.createApiKey.value;
+
+  console.log("Create - Username: ", userInfo.username);
+  console.log("Create - Password: ", userInfo.password);
+  console.log("Create - SteamId: ", userInfo.steamId);
+  console.log("Create - ApiKey: ", userInfo.apiKey);
+  console.log("Create - userInfo: ", userInfo);
+});
 
 btn_UserInput.addEventListener("click", function (event) {
   // PREVENTS FORM SUBMISSION
