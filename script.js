@@ -45,6 +45,7 @@ const user_InputForm = document.getElementById("userInputForm");
 // Create Account Form - Contains Username/Password given by User
 const create_AccountForm = document.getElementById("createAccountForm");
 
+// Create Account Submit Button - used for EventListener
 const btn_CreateAccount = document.getElementById("btn_CreateAccount");
 
 // Individual Game Selectors
